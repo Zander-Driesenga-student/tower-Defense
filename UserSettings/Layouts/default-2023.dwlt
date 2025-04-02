@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 98
+  controlID: 38
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -390,7 +390,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 94f5ffff
+      m_ExpandedIDs: 10fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -527,8 +527,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: de5c0000
-    m_LastClickedID: 23774
+    m_SelectedIDs: 025c0000
+    m_LastClickedID: 23554
     m_ExpandedIDs: 0000000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 0.095499754, y: 0.97337914, z: -10.079742}
     speed: 2
-    m_Value: {x: 0.09549942, y: 0.9733793, z: -10.079742}
+    m_Value: {x: 0.095499754, y: 0.97337914, z: -10.079742}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.35655165, y: 0.22968213, z: -0.090887904, w: -0.9010234}
     speed: 2
-    m_Value: {x: -0.35790518, y: 0.22954708, z: -0.091232926, w: -0.90049356}
+    m_Value: {x: -0.35655403, y: 0.22968367, z: -0.09088851, w: -0.9010294}
   m_Size:
     m_Target: 5.021304
     speed: 2
