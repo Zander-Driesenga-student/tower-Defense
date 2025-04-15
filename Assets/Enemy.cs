@@ -13,6 +13,7 @@ namespace TowerDefense
 
         void Start()
         {
+            path = FindAnyObjectByType<Path>();
             StartCoroutine(FollowPath());
         }
 
@@ -25,6 +26,7 @@ namespace TowerDefense
 
                 float maxDistance = Mathf.Min(speed * Time.deltaTime, (target - start).magnitude);
                 transform.position = Vector3.MoveTowards(start, target, maxDistance);
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(target - start), 0.05f);
 
                 if (transform.position ==  target) index++;
                 yield return null;
