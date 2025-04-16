@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 64934753132966847}
   - component: {fileID: 2037186856715322810}
   - component: {fileID: 1179061534234544400}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 908423164711531238}
   - component: {fileID: 8539526323607960116}
   - component: {fileID: 3341474106775294452}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4678943716089319876}
   - component: {fileID: 5370656601789163483}
   - component: {fileID: 4776468177183806803}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyBlob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 1539372159879199110}
   - component: {fileID: 5143553160017398576}
   - component: {fileID: 3104480877601770320}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8011046741561566951}
   - component: {fileID: 7019822937004829195}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TowerDefense_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,9 +402,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6798130917250472476}
   - component: {fileID: 1694486066181355626}
-  m_Layer: 0
+  - component: {fileID: 5583530346321913698}
+  - component: {fileID: 2505973354145324317}
+  m_Layer: 2
   m_Name: TrueEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,5 +441,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 0}
   index: 0
-  speed: 10
+  speed: 1
   damage: 1
+--- !u!135 &5583530346321913698
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776583399710277323}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2505973354145324317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776583399710277323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb6495c6a3de8d4f8313ce5494ceda3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 10
