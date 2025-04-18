@@ -49,10 +49,10 @@ namespace TowerDefense
                 
                 if (!enemiesInRange[0]) enemiesInRange.RemoveAt(0);
                 else Health.TryDamage(enemiesInRange[0], towerType.damage);
-                print("firing");
+                
                 yield return new WaitForSeconds(towerType.fireRate);
             }
-
+            
             firing = false;
         }
 
