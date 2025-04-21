@@ -7,9 +7,10 @@ namespace TowerDefense
     [RequireComponent(typeof(Animator))]
     public class Tower : MonoBehaviour
     {
-        public List<GameObject> enemiesInRange = new List<GameObject>();
+        [SerializeField] public List<GameObject> enemiesInRange = new List<GameObject>();
         public Tower_SO towerType;
         private bool firing = false;
+        public bool following = false;
         GameObject enemyTarget;
         Animator animator;
 
@@ -20,7 +21,12 @@ namespace TowerDefense
 
         public void DamageTarget()
         {
-            if (!enemyTarget) return;
+            if (!enemyTarget)
+            {
+                following = false;
+                return;
+            }
+            following = true;
             Health.TryDamage(enemyTarget, towerType.damage);
         }
 
@@ -30,13 +36,18 @@ namespace TowerDefense
             while (i < enemiesInRange.Count)
             {
                 if (enemiesInRange[i]) i++;
-                else enemiesInRange.RemoveAt(i);
+                else 
+                {
+                    enemiesInRange.RemoveAt(i);
+                    following = false;
+                }
             }
         }
 
         IEnumerator DamageEnemyTarget()
         {
             firing = true;
+            
 
             while (enemiesInRange.Count > 0)
             {
@@ -47,25 +58,27 @@ namespace TowerDefense
                     animator.SetTrigger("Fire");
                 }
                 
-                if (!enemiesInRange[0]) enemiesInRange.RemoveAt(0);
-                else Health.TryDamage(enemiesInRange[0], towerType.damage);
+                /*if (!enemiesInRange[0]) enemiesInRange.RemoveAt(0);
+                else Health.TryDamage(enemiesInRange[0], towerType.damage);*/
                 
                 yield return new WaitForSeconds(towerType.fireRate);
             }
             
             firing = false;
+            
         }
 
         private void OnTriggerEnter(Collider other)
         {
+            
             if (other.gameObject.CompareTag("Enemy")) enemiesInRange.Add(other.gameObject);
-
             if (!firing) StartCoroutine(DamageEnemyTarget());
         }
 
         private void OnTriggerExit(Collider other)
         {
             enemiesInRange.Remove(other.gameObject);
+            following = false;
         }
     }
 }

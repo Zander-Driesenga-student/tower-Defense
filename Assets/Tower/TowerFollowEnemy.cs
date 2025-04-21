@@ -8,7 +8,7 @@ namespace TowerDefense
 {
     public class TowerFollowEnemy : MonoBehaviour
     {
-        Tower tower;
+        public Tower tower;
 
         void Start()
         {
@@ -19,7 +19,9 @@ namespace TowerDefense
         // Update is called once per frame
         void Update()
         {
-            gameObject.transform.LookAt(tower.enemiesInRange[0].transform.position);
+            if (tower.following == false) return;
+                
+            else gameObject.transform.LookAt(tower.enemiesInRange[0].transform.position);
         }
     }
 }

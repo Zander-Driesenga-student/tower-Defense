@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesInRange: []
   towerType: {fileID: 11400000, guid: 3eded907bc1a9954fa1cdfe2268a73d6, type: 2}
+  following: 0
 --- !u!1 &4243756555966420487
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8842851677437344013}
-  - component: {fileID: 4848408398542371357}
+  - component: {fileID: 8445170310084786330}
   m_Layer: 0
   m_Name: Bow and Arrow
   m_TagString: Untagged
@@ -238,7 +239,7 @@ Transform:
   - {fileID: 956724527822384431}
   m_Father: {fileID: 2619746873668059455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4848408398542371357
+--- !u!114 &8445170310084786330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
