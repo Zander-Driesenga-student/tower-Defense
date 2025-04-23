@@ -11,7 +11,7 @@ namespace TowerDefense
         public Tower_SO towerType;
         private bool firing = false;
         public bool following = false;
-        GameObject enemyTarget;
+        public GameObject enemyTarget;
         Animator animator;
 
         private void Start()
@@ -57,10 +57,6 @@ namespace TowerDefense
                     enemyTarget = enemiesInRange[0];
                     animator.SetTrigger("Fire");
                 }
-                
-                /*if (!enemiesInRange[0]) enemiesInRange.RemoveAt(0);
-                else Health.TryDamage(enemiesInRange[0], towerType.damage);*/
-                
                 yield return new WaitForSeconds(towerType.fireRate);
             }
             
@@ -70,8 +66,11 @@ namespace TowerDefense
 
         private void OnTriggerEnter(Collider other)
         {
-            
-            if (other.gameObject.CompareTag("Enemy")) enemiesInRange.Add(other.gameObject);
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                enemiesInRange.Add(other.gameObject);
+                following = true;
+            } 
             if (!firing) StartCoroutine(DamageEnemyTarget());
         }
 

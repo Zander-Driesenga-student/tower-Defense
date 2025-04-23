@@ -13,7 +13,6 @@ namespace TowerDefense
         void Start()
         {
             tower = GetComponentInParent<Tower>();
-            
         }
 
         // Update is called once per frame
@@ -21,7 +20,15 @@ namespace TowerDefense
         {
             if (tower.following == false) return;
                 
-            else gameObject.transform.LookAt(tower.enemiesInRange[0].transform.position);
+            if (tower.following == true)
+            {
+                if (!tower.enemyTarget)
+                {
+                    tower.following = false;
+                    return;
+                }
+                gameObject.transform.LookAt(tower.enemiesInRange[0].transform.position);
+            }    
         }
     }
 }
