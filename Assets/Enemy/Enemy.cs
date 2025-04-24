@@ -33,7 +33,9 @@ namespace TowerDefense
             }
             if (index == 13)
             {
-                print("hit");
+                Player player = FindAnyObjectByType<Player>();
+                Health.TryDamage(player.gameObject,damage);
+                Destroy(gameObject);
             }
         }
     }

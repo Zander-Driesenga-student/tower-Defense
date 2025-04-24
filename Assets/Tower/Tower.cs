@@ -9,7 +9,7 @@ namespace TowerDefense
     {
         [SerializeField] public List<GameObject> enemiesInRange = new List<GameObject>();
         public Tower_SO towerType;
-        private bool firing = false;
+        public bool firing = false;
         public bool following = false;
         public GameObject enemyTarget;
         Animator animator;
@@ -28,6 +28,11 @@ namespace TowerDefense
             }
             following = true;
             Health.TryDamage(enemyTarget, towerType.damage);
+            if (gameObject.CompareTag("Cannon"))
+            {
+                print("hit");
+            }
+            
         }
 
         private void RemoveDestroyedEnemies()
@@ -54,8 +59,9 @@ namespace TowerDefense
                 RemoveDestroyedEnemies();
                 if (enemiesInRange.Count > 0)
                 {
-                    enemyTarget = enemiesInRange[0];
                     animator.SetTrigger("Fire");
+                    enemyTarget = enemiesInRange[0];
+                    DamageTarget();
                 }
                 yield return new WaitForSeconds(towerType.fireRate);
             }
