@@ -9,7 +9,7 @@ namespace TowerDefense
     {
         [SerializeField] public List<GameObject> enemiesInRange = new List<GameObject>();
         public Tower_SO towerType;
-        public bool firing = false;
+        private bool firing = false;
         public bool following = false;
         public GameObject enemyTarget;
         Animator animator;

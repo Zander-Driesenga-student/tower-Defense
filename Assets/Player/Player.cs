@@ -8,7 +8,7 @@ namespace TowerDefense
     public class Player : MonoBehaviour
     {
         public GameObject towerPrefab;
-        public int gold;
+        public int gold = 100;
         Grid grid;
         Cursor cursor;
 
@@ -33,7 +33,16 @@ namespace TowerDefense
             GameObject newtower = Instantiate(towerPrefab, tileCoordinates, Quaternion.identity);
             grid.Add(tileCoordinates, newtower);
             gold -= Tower_SO.GetCost(towerPrefab);
+            UIValues.OnValueChange.Invoke("PlayerGold",gold);
             return true;
+        }
+        public static void GetPlayerGold(int newGold)
+        {
+            
+        }
+        public static void GainGoldFromKill(int gold)
+        {
+            gold += 15;
         }
 
 

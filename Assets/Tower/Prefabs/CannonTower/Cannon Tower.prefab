@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: []
-  towerType: {fileID: 11400000, guid: 3eded907bc1a9954fa1cdfe2268a73d6, type: 2}
+  towerType: {fileID: 11400000, guid: b624a0b3ba2eb8c46b5c40d60de88677, type: 2}
   firing: 0
   following: 0
   enemyTarget: {fileID: 0}

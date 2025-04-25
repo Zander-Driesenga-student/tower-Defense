@@ -9,15 +9,23 @@ namespace TowerDefense
     {
         public int currentHealth = 10;
         public bool dieOnZeroHealth = true;
+        private int playerGold;
+        public UnityEvent OnZeroHealth = new UnityEvent();
+        public UnityEvent OnTakeDamge = new UnityEvent();
 
-        public UnityEvent OnActive = new UnityEvent();
-
+        private void Awake()
+        {
+            
+        }
         public void TakeDamage(int damageAmount)
         {
             currentHealth -= damageAmount;
+            UIValues.OnValueChange.Invoke(gameObject.name + "Health", currentHealth);
+            OnTakeDamge.Invoke();
             if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
             {
                 Destroy(gameObject);
+                Player.GainGoldFromKill();
             }
             else
             {
@@ -39,9 +47,10 @@ namespace TowerDefense
         {
             if (dieOnZeroHealth == true)
             {
-                OnActive.Invoke();
+                OnZeroHealth.Invoke();
             }
         }
+
 
     }
 }
