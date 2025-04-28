@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,6 @@ namespace TowerDefense
     {
         public int currentHealth = 10;
         public bool dieOnZeroHealth = true;
-        private int playerGold;
         public UnityEvent OnZeroHealth = new UnityEvent();
         public UnityEvent OnTakeDamge = new UnityEvent();
 
@@ -25,7 +25,6 @@ namespace TowerDefense
             if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
             {
                 Destroy(gameObject);
-                Player.GainGoldFromKill();
             }
             else
             {

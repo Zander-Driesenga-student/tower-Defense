@@ -36,14 +36,7 @@ namespace TowerDefense
             UIValues.OnValueChange.Invoke("PlayerGold",gold);
             return true;
         }
-        public static void GetPlayerGold(int newGold)
-        {
-            
-        }
-        public static void GainGoldFromKill(int gold)
-        {
-            gold += 15;
-        }
+        
 
 
         
