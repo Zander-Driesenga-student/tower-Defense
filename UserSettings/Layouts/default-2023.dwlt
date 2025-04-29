@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 412
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -354,9 +354,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e25e0000
-      m_LastClickedID: 24290
-      m_ExpandedIDs: f2f9ffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0cf8ffff06f9ffff1cfbffffba5c00008c5f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -765,9 +765,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 30.648548, y: -7.4861603, z: 9.653763}
+    m_Target: {x: 54.338245, y: -27.023981, z: -0.6647522}
     speed: 2
-    m_Value: {x: 30.648548, y: -7.4861603, z: 9.653763}
+    m_Value: {x: 54.338245, y: -27.023981, z: -0.6647522}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -813,13 +813,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1524739, y: -0.51790625, z: 0.09440636, w: -0.836437}
+    m_Target: {x: -0.16833942, y: -0.6868419, z: 0.16826421, w: -0.6868147}
     speed: 2
-    m_Value: {x: -0.15121798, y: -0.5180435, z: 0.0936287, w: -0.83665866}
+    m_Value: {x: -0.16858172, y: -0.6857707, z: 0.16800167, w: -0.68780386}
   m_Size:
-    m_Target: 20.070282
+    m_Target: 32.53794
     speed: 2
-    m_Value: 19.20601
+    m_Value: 32.53794
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1080,7 +1080,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UI/UI Assets/Scripts
+    - Assets/Enemy/Enemy Assets/EnemyPrefab
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1088,18 +1088,18 @@ MonoBehaviour:
     m_ImportLogFlags: 0
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
-  m_StartGridSize: 72
+  m_StartGridSize: 75
   m_LastFolders:
-  - Assets/UI/UI Assets/Scripts
-  m_LastFoldersGridSize: 72
+  - Assets/Enemy/Enemy Assets/EnemyPrefab
+  m_LastFoldersGridSize: 75
   m_LastProjectPath: C:\Users\zadr09b\Documents\GitHub\tower-Defense
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 99}
-    m_SelectedIDs: 7c620000
-    m_LastClickedID: 25212
-    m_ExpandedIDs: 00000000486200005e6200007e62000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 62c60000
+    m_LastClickedID: 50786
+    m_ExpandedIDs: 00000000aa610000bc610000c6610000e661000064c6000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1127,7 +1127,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000048620000
+    m_ExpandedIDs: 00000000aa610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1180,7 +1180,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 72
+    m_GridSize: 75
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 115
 --- !u!114 &18
@@ -1221,7 +1221,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -2206
+  m_LastSelectedObjectID: -1786
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1265,7 +1265,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 55
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

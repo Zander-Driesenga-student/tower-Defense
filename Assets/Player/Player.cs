@@ -11,15 +11,17 @@ namespace TowerDefense
         public int gold = 100;
         Grid grid;
         Cursor cursor;
+        UICursorCapture cursorCapture;
 
         private void Awake()
         {
             grid = FindAnyObjectByType<Grid>();
             cursor = FindAnyObjectByType<Cursor>();
+            cursorCapture = FindAnyObjectByType<UICursorCapture>();
         }
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !cursorCapture.cursorOverUI)
             {
                 TryPlaceTower(grid, Grid.WorldToGrid(cursor.transform.position));
             }
@@ -36,7 +38,10 @@ namespace TowerDefense
             UIValues.OnValueChange.Invoke("PlayerGold",gold);
             return true;
         }
-        
+        public void AddGold()
+        {
+            gold += 15;
+        }
 
 
         
